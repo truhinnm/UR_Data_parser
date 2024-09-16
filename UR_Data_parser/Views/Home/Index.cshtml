@@ -1,0 +1,20 @@
+﻿@model UR_Data_parser.Models.DBSend
+
+<h2>Send file to DB</h2>
+<form method="post" enctype="multipart/form-data">
+    <label>Connect to DB</label><br />
+    <label>Host:</label><br />
+    <input asp-for="Host" type="text" name="host" /><br />
+    <label>Port:</label><br />
+    <input asp-for="Port" type="text" name="port" /><br />
+    <label>Database:</label><br />
+    <input asp-for="Database" type="text" name="database" /><br />
+    <label>Username:</label><br />
+    <input asp-for="Username" type="text" name="username" /><br />
+    <label>Password:</label><br />
+    <input asp-for="Password" type="text" name="password" /><br />
+    <label>Select CSV:</label><br />
+    <input type="file" accept=".csv" name="csvData" /><br />
+    <input type="submit" value="Send" />
+</form>
+<label>Status: @ViewBag.Title</label>
